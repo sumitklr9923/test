@@ -18,9 +18,5 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install Dependencies
-      run: |
-        pip install -r requirements.txt  # If you have any dependencies
-
     - name: Run Auto Click Script
       run: python auto_click.py

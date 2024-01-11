@@ -5,7 +5,7 @@ import time
 driver = webdriver.Chrome()  # You can use other drivers like Firefox or Edge
 
 # Open the HTML file
-driver.get("index.html")  # Replace with the actual path to your HTML file
+driver.get("/test/index.html")  # Replace with the actual path to your HTML file
 
 # Wait for 3 seconds
 time.sleep(3)

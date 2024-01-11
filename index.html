@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change on Click</title>
+    <style>
+        body {
+            background-color: white;
+            transition: background-color 0.5s ease;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click anywhere to change the background color</h1>
+
+    <script>
+        // JavaScript code to change background color on document click
+        document.addEventListener('click', function() {
+            // Get the body element
+            var body = document.body;
+
+            // Check the current background color
+            var currentColor = getComputedStyle(body).backgroundColor;
+
+            // Change background color based on the current color
+            body.style.backgroundColor = (currentColor === 'rgb(255, 255, 255)') ? 'green' : 'white';
+        });
+    </script>
+
+</body>
+</html>

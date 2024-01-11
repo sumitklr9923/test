@@ -1,25 +1,21 @@
 from selenium import webdriver
 import time
 
-# Set up the Selenium WebDriver in headless mode
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-driver = webdriver.Chrome(options=options)
+# Set up the Selenium WebDriver (you need to have the corresponding browser driver installed)
+driver = webdriver.Chrome()  # You can use other drivers like Firefox or Edge
 
-try:
-    # Open the HTML page in the browser
-    driver.get("/a/index.html")  # Replace with the actual path or URL
+# Open the HTML file
+driver.get("index.html")  # Replace with the actual path to your HTML file
 
-    # Wait for the page to load
-    time.sleep(3)
+# Wait for 3 seconds
+time.sleep(3)
 
-    # Simulate a click on the document
-    body = driver.find_element_by_tag_name('body')
-    body.click()
+# Simulate a click on the document body
+body = driver.find_element_by_tag_name('body')
+body.click()
 
-    # Wait for a while to observe the color change (you might want to adjust the sleep duration)
-    time.sleep(2)
+# Wait for a while to observe the color change (you might want to adjust the sleep duration)
+time.sleep(2)
 
-finally:
-    # Close the browser
-    driver.quit()
+# Close the browser
+driver.quit()
